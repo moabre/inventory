@@ -1,0 +1,16 @@
+//linking dependencies
+@use './components/styles/variable' as *;
+@use './components/styles/typography' as *;
+//general reset
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trillium";
+}
+
+body {
+  text-align: center;
+  background-color: $lightgrey;
+  font-family: 'Trillium'; 
+}

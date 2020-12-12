@@ -1,0 +1,27 @@
+//linking dependencies
+@use '../../styles/variable' as *;
+@use '../../styles/mixin' as *;
+
+.mains{
+    @include maximum-content-width;
+    @include main-content;
+    &__search{
+        display: flex;
+        flex-direction: column;
+        
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+.search__title {
+    @include page-title;
+    justify-content: space-between;
+    position: relative;
+    &::after {
+        bottom: -1rem
+    }
+}

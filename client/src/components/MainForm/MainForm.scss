@@ -1,0 +1,60 @@
+//linking dependencies
+@use '../styles/variable' as *;
+@use '../styles/mixin' as *;
+//form
+.main-form {
+    position: relative;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include bottom-border;
+
+    @include tablet {
+
+        flex-direction: row;
+        padding-bottom: 0px;
+        margin-right: 32px;
+        &::after {
+            border-bottom: none;
+            
+        }
+
+        position: absolute;
+        top: 22px;
+        right: 1rem;
+    }
+}
+//text input
+.input-text {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    width: 78.35vw;
+    height: 36px;
+    border-radius: 20px;
+    border: 1px solid #BDC5D5;
+    background-image: url('../../assets/icons/search-24px.svg');
+    background-repeat: no-repeat;
+    background-position: 94% 50%;
+    outline:none;
+    &:focus{
+        border:1px solid $indigo;
+    }
+    @include tablet {
+        width: 185px;
+        height: 38px;
+        border-radius: 20px;
+        outline: none;
+        border: 1px $slate solid;
+        margin-right: 1rem;
+        margin-bottom: 0px;
+    }
+}
+//button warehouse
+.btn-blue--warehouse {
+    width: 78.35vw;
+
+    @include tablet {
+        width: 185px;
+    }
+}

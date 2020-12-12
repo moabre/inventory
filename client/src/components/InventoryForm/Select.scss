@@ -1,0 +1,21 @@
+@use '../styles/mixin' as *;
+@use '../styles/variable' as *;
+@use '../styles/typography' as *;
+
+.select{
+    &-invalid{
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        border: 1px solid $red;
+        align-self: stretch;
+        appearance: none;
+        background-position: right 10px top 50%;
+        background-image: url('../../assets/icons/arrow_drop_down-24px.svg');
+        background-repeat: no-repeat;
+        background-size: 1rem 1rem;
+
+        &:focus{
+            outline: none;
+        }
+    }
+}

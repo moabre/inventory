@@ -1,0 +1,120 @@
+//linking dependencies
+@use '../styles/variable' as *;
+@use '../styles/mixin' as *;
+//list
+.list {
+    @include maximum-content-width;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    position: relative;
+    background-color: white;
+
+    @include bottom-border;
+
+    @include tablet {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &:hover {
+        background-color: $indigo7;
+    }
+}
+//tile setup
+.info {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 0;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__sub {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        &--first {
+            width: 156px;
+        }
+
+        @include tablet {
+            flex-direction: row;
+            align-items: center;
+            width: 300px;
+        }
+    }
+
+    &__card {
+        text-align: left;
+        height: 3rem;
+
+        &--first {
+            height: 3rem;
+        }
+
+        &--second {
+            margin-bottom: 1rem;
+
+            @include tablet {
+                margin-bottom: 0;
+                padding-left: 1rem;
+            }
+        }
+
+        &--last {
+            display: none;
+
+            &--inventory {
+                display: inline;
+            }
+        }
+
+        @include tablet {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex: 1;
+            padding-left: 3.5rem;
+        }
+    }
+
+    &__label {
+        font-size: 11px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__content {
+        font-size: 13px;
+    }
+}
+//list actions
+.list-actions {
+    display: flex;
+    justify-content: space-between;
+}
+//delete and edit button 
+.action {
+    padding: 0.5rem;
+}
+//links
+.link--list {
+    color: $indigo;
+    
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

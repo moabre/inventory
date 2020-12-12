@@ -1,0 +1,72 @@
+//linking dependencies
+@use '../styles/variable' as *;
+@use '../styles/mixin' as *;
+//form
+.main-forms {
+    position: relative;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include bottom-border;
+
+    @include tablet {
+
+        flex-direction: row;
+        padding-bottom: 0px;
+        margin-right: 32px;
+        &::after {
+            border-bottom: none;
+        }
+    }
+}
+//text input
+.inputs {
+    margin-bottom: 1rem;
+    height: 36px;
+    border-radius: 20px;
+    border: 1px solid #BDC5D5;
+    padding-left: 15px;
+    width: 90%;
+    border-radius: 20px;
+    background-image: url('../../assets/icons/search-24px.svg');
+    background-repeat: no-repeat;
+    background-position: 94% 50%;
+    outline:none;
+    &:focus{
+        border:1px solid $indigo;
+    }
+
+    @include tablet {
+        width: 185px;
+        height: 38px;
+        border-radius: 20px;
+        padding: 0.5rem 1rem;
+        outline: none;
+        border: 1px $slate solid;
+        margin-right: 1rem;
+        margin-bottom: 0px;
+    }
+}
+.input-button {
+    color: white;
+    border: none;
+    width: 295px;
+    height: 36px;
+    font-size: 14px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: $indigo;
+    &:hover{
+        background-color: $graphite;
+    }
+    @include tablet {
+        width: 128px;
+        height: 38px;
+        font-size: 14px;
+    }
+}
+//button warehouse
+.btn-blue--warehouse {
+    width: 168px;
+}

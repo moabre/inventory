@@ -1,0 +1,55 @@
+//linking dependencies
+@use '../styles/variable' as *;
+@use '../styles/mixin' as *;
+//List header
+.list-header {
+    background-color: $lightgrey;
+    display: none;
+
+    @include tablet {
+        display: flex;
+    }
+}
+//container
+.container {
+    padding: 0 1.5rem;
+    width: 100%;
+
+    @include tablet {
+        display: flex;
+        align-items: center;
+    }
+
+    &__sub {
+        display: flex;
+
+        @include tablet {
+            width: 39.0625vw;
+        }
+
+        @include desktop {
+            width: 476px;
+        }
+    }
+
+    &__action {
+        padding-left: 1rem;
+        text-transform: uppercase;
+    }
+}
+.title {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6875rem;
+    text-transform: uppercase;
+
+    &--last {
+        display: none;
+
+        &--inventory {
+            display: flex;
+        }
+    }
+}

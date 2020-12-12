@@ -1,0 +1,30 @@
+@use '../styles/variable' as *;
+@use '../styles/typography' as *;
+@use '../styles/mixin' as *;
+
+.footer{
+    width:100%;
+    height:96px;
+    background-color: $lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:5px;
+    
+    &__text{
+        @include mH4;
+        color: $slate;
+    }
+    @include tablet{
+        height:128px;
+        align-items: flex-end;
+        margin-bottom: 40px;
+        &__text{
+            @include tdP3;
+        }
+    }
+    @include desktop{
+        height: 114px;
+        margin-bottom: 48px;
+    }
+}

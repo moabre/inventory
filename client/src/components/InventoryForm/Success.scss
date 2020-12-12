@@ -1,0 +1,66 @@
+@use '../styles/mixin' as *;
+@use '../styles/variable' as *;
+@use '../styles/typography' as *;
+
+.success{
+    // background-color: rgba(19, 24, 44, 0.7);
+    @include tablet {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }    
+    &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: $black70;
+        z-index: 1000;
+    }
+
+    &-text{
+        background-color: white;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1005;
+        
+        @include tablet {
+            width: 515px;
+            height: 150px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+    }
+
+    &-header{
+        display: flex;
+        background-color: $graphite;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+        @include tablet{
+            align-items: center;
+            padding-left: 1rem;
+            justify-content: flex-start;
+        }
+    }
+
+    &-message{
+        padding-left: 1rem;
+    }
+
+
+}

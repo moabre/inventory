@@ -1,0 +1,223 @@
+@use '../styles/mixin' as *;
+@use '../styles/variable' as *;
+@use '../styles/typography' as *;
+
+label{
+    @include mH3;
+    font-family: "Trillium-SemiBold";
+    @include tablet{
+        @include tdH3;
+    }
+}
+
+
+
+[type="radio"]:checked+label {
+    color: $black;
+  }
+
+.radio{
+    font-family: "Trillium";
+    position: relative;
+    left: 0.5rem;
+    color: $slate;
+
+    &-input{
+        display: flex;
+        gap: 89px;
+    }
+
+    &-wrapper{
+        display: flex;
+        align-items: center;
+
+        &:nth-child(2){
+            margin-left: -1.5rem;
+        }
+    }
+}
+.label-input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    padding-bottom: 1rem;
+}
+
+.inv-input{
+    @include mH3;
+    border-radius: 20px;
+    border: 1px solid $cloud;
+    padding: 0.5rem 1rem;
+    align-self: stretch;
+    resize: none;
+    @include tablet{
+        @include tdP2;
+    }
+
+    &-invalid{
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        border: 1px solid $red;
+        align-self: stretch;
+        resize: none;
+        &:focus{
+            outline: none;
+        }
+    }
+    &:focus{
+        outline: none;
+        border-color: $indigo;
+    }
+
+    &:enabled:required:invalid{
+        background-color: white;
+        border-color: $red;
+    }
+
+    // &:enabled:required:valid{
+    //     border: 1px solid $cloud;
+    // }
+}
+
+.select{
+    @include mH3;
+    @extend .inv-input;
+    color: $slate;
+    appearance: none;
+    background-position: right 10px top 50%;
+    background-image: url('../../assets/icons/arrow_drop_down-24px.svg');
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+    @include tablet{
+        @include tdP2;
+    }
+
+    &:focus{
+        outline: none;
+        border-color: $indigo;
+        background-image: url('../../assets/icons/arrow_drop_down-24px-blue.svg');
+    }
+
+    &:invalid{
+        background-color: white;
+        border-color: $red;
+    }
+}
+
+.inv{
+    
+    &-form{
+        @include main-content;
+        box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+        border-radius: 3px;
+        @include tablet{
+            margin-top: -6rem;
+        }
+
+        &-header{
+            display: flex; 
+            align-items: baseline;
+            justify-content: center;
+            border-bottom: solid 1px $cloud;
+            text-align: left;
+            position: relative;
+            padding-top: 2rem;
+            padding-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+
+            @include tablet{
+                justify-content: flex-start;
+                padding-left: 2.25rem;
+            }
+        }
+
+        &-title{
+            @include mH1;
+            width: 263px;
+            @include tablet{
+                @include tdH1;
+                
+                width: 100%;
+            }
+        }
+    }
+
+    &-details{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1.5rem;
+        border-bottom: solid 1px $cloud;
+
+        @include tablet{
+            border-bottom: none;
+            border-right: solid 1px $cloud;
+            flex: 1;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &-avail{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1.5rem;
+        @include tablet{
+            margin: 0;
+            flex: 1;
+        }
+    }
+
+    &-title{
+        @include mH2;
+        margin-bottom: 1.5rem;
+        @include tablet{
+            @include tdH2;
+        }
+    }
+
+    &-radio{
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        margin-bottom: 1rem;
+
+        &-title{
+            align-self: flex-start;
+        }
+    }
+
+    &__btn-container{
+        display: flex;
+        background-color: rgba(247, 248, 249, 0.7);
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+        @include tablet{
+            justify-content: flex-end;
+        }
+    }
+}
+
+.arrow{
+    height: 1rem;
+    width: 1rem;
+    position: relative;
+    right: 4px;
+    bottom: 1px;
+
+    @include tablet{
+        bottom: 3px;
+    }
+}
+
+.form-split{
+    @include tablet{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}

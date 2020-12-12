@@ -1,0 +1,31 @@
+@use '../styles/mixin' as *;
+@use '../styles/variable' as *;
+@use '../styles/typography' as *;
+
+
+.instock{
+    @include mH4;
+    font-weight: 600;
+    line-height: 1.5rem;
+    border-radius: 20px;
+    background-color: rgba(21, 132, 99, 0.07);
+    color: $green; 
+    padding: 0 0.5rem;
+}
+
+.outstock{
+    @include mH4;
+    font-weight: 600;
+    line-height: 1.5rem;
+    border-radius: 20px;
+    background-color: rgba(201, 69, 21, 0.07);
+    color: $red; 
+    text-align: center;
+    padding: 0 0.5rem;
+
+    @include tablet{
+        @include tdH4;
+        line-height: 26px;
+        padding: 0 0.5rem;
+    }
+}

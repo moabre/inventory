@@ -1,0 +1,47 @@
+//linking dependencies
+@use '../../styles/variable' as *;
+@use '../../styles/mixin' as *;
+@use '../../styles/typography' as *;
+//form
+.main {
+    @include main-content;
+    position: relative;
+
+    &-warehouse {
+        padding: 0;
+    }
+}
+.component {
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 0 0 3px 3px;
+}
+.page-title {
+    @include page-title;
+    justify-content: space-between;
+    position: relative;
+
+    &__content {
+        @include mH1;
+
+        @include tablet {
+            @include tdH1;
+        }
+    }
+
+    &--button {
+        display: flex;
+        align-items: center;
+    }
+
+    &--detail {
+        @include bottom-border;
+    }
+
+    &::after {
+        bottom: -1rem
+    }
+}
+
+.component {
+    z-index: 0;
+}

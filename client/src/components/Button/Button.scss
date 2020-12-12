@@ -1,0 +1,76 @@
+@use '../styles/variable' as *;
+@use '../styles/mixin' as *;
+
+.btn {
+    color: white;
+    border: none;
+    width: auto;
+    height: 2.25rem;
+    padding: 0 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    flex: 1;
+    text-align: center;
+    @include tablet{
+         flex: 0 98px;
+         width: 100%;
+    }
+
+    &-edit{
+        background: url('../../assets/icons/edit-24px-white.svg') no-repeat top 8px left 8px;
+        background-size: 16px 16px;
+        height: 2rem;
+    }
+
+    &-edit-td{
+        background: url('../../assets/icons/edit-24px-white.svg') no-repeat top 8px left 16px;
+        background-size: 16px 16px;
+        height: 2rem;
+        padding-left: 2.7rem;
+    }
+    
+
+    &:focus{
+        outline: none;
+    }
+
+    &-wrapper{
+        display: flex;
+        background-color: rgba(247, 248, 249, 0.7);
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+        @include tablet{
+            justify-content: flex-end;
+        }
+    }
+    &-blue{
+        background-color: $indigo;
+        @include tablet{
+            
+        }
+        &:hover{
+            background-color: $graphite;
+        }
+    }
+
+    &-red{
+        background-color: $red;
+
+        &:hover{
+            background-color: $graphite;
+        }
+    }
+
+    &-white{
+        background-color: white;
+        color: $slate;
+        border: solid 1px $cloud;
+
+        &:hover{
+            border-color: $indigo;
+            color: $indigo;
+        }
+
+    }
+}

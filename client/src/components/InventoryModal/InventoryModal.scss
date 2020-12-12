@@ -1,0 +1,82 @@
+//linking dependencies
+@use '../styles/variable' as *;
+@use '../styles/mixin' as *;
+//modal styles
+.modal {
+
+    @include tablet {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        &::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: $black70;
+            z-index: 1000;
+        }
+    }
+
+    &__contents {
+        background-color: white;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+        text-align: left;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        @include tablet {
+            width: 672px;
+            height: 262px;
+            top: 186px;
+            left: 25%;
+            position: absolute;
+            padding: 1.5rem 4rem;
+        }
+    }
+}
+//cancel button
+.cancel {
+    display: flex;
+    flex-direction: row-reverse;
+}
+//modal button tray
+.modal-btn-tray {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+        justify-content: flex-end;
+    }
+}
+//modal button
+.btn-modal {
+    width: 136px;
+    margin-left: 1rem;
+
+    @include tablet {
+        margin-left: 1rem;
+    }
+
+    @include tablet {
+        width: 72px;
+    }
+}
+
+a:link.btn-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}  

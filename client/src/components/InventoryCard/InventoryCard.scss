@@ -1,0 +1,163 @@
+@use '../styles/mixin' as *;
+@use '../styles/variable' as *;
+@use '../styles/typography' as *;
+a {
+    text-decoration: none;
+    color: white;
+    &:visited{
+        color: none;
+        text-decoration: none;
+    }
+}
+
+.arrow{
+    @include tablet{
+        bottom: 0;
+    }
+}
+
+.invCard{
+    //Header = Back Arrow + Inventory Name + Edit Button
+    @include main-content;
+    &__header{
+        display: flex;
+        align-items: baseline;
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+        padding-right: 1.5rem;
+        padding-left: 1.75rem;
+        border-bottom: 1px solid $cloud;
+
+        &-arrow{
+            height: 1rem;
+            width: 1rem;
+            margin-right: 12px;
+        }
+
+        &-title{
+            @include mH1;
+            margin-right: auto;
+        }
+
+        &-edit{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            color: white;
+            background-color: $indigo;
+            border-radius: 20px;
+
+            background-image: url('../../assets/icons/edit-24px-white.svg')
+
+            &-pen{
+                height: 1rem;
+                width: 1rem;
+                position: relative;
+            }
+        }  
+    }
+
+    &-m-btn{
+        @include tablet{
+            display: none;
+        }
+    }
+
+    &-td-btn{
+        display: none;
+        @include tablet{
+            display: block;
+        }
+    }
+
+    //Labels for Item Description, Category, Status, Quanitity, Warehouse
+    &__label{
+        @include mH4;
+        color: $slate;
+        margin-bottom: 4px;
+    }
+    // Content following the labels
+    &__fill{
+        @include mP2;
+        text-align: left;
+    }
+    &__info{
+        padding: 1rem 1.5rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__desc{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+
+    &__category{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+
+    &__stock{
+        display: flex;
+        align-items: flex-start;
+        align-self: stretch;
+        margin-bottom: 1rem;
+    }
+
+    &__status{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1;
+        
+    }
+    &__quantity{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1;
+    }
+
+    &__warehouse{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+
+    &__split{
+        align-self: stretch;
+        @include tablet{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        
+    }
+    &__left{
+        align-self: stretch;
+        @include tablet{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid $cloud;
+        }
+    }
+
+    &__right{
+        align-self: stretch;
+        @include tablet{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding-left: 2.5rem;
+        }
+    }
+        
+}

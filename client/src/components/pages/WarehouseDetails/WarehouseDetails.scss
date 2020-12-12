@@ -1,0 +1,21 @@
+//linking dependencies
+@use '../../styles/variable' as *;
+@use '../../styles/mixin' as *;
+//main
+.main {
+
+    &-warehouse {
+        padding: 0;
+    }
+}
+.page-title {
+    
+    &--button {
+        display:flex;
+        align-items: center;
+    }
+}
+.component {
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 0 0 3px 3px;
+}

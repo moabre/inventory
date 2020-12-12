@@ -1,0 +1,142 @@
+//linking dependencies
+@use '../styles/variable' as *;
+@use '../styles/mixin' as *;
+@use '../styles/typography' as *;
+//list
+.lists {
+
+    margin: 0 auto;
+    padding: 1rem 0rem 1rem 1.5rem;
+    position: relative;
+    background-color: white;
+
+    @include bottom-border;
+    @include tablet {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+//tile setup
+.infos {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 0;
+    }
+    
+    &__sub {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        &--first {
+            width: 156px;
+            
+        }
+
+        @include tablet {
+            flex-direction: row;
+            width: 300px;
+        }
+    }
+
+    &__card {
+        text-align: left;
+        height: 3rem;
+
+        &--first {
+            height: 3rem;
+            
+        }
+
+        &--second {
+            margin-bottom: 1rem;
+        }
+
+        &--last {
+            display: none;
+
+            &--inventory {
+                display: inline;
+            }
+        }
+
+        @include tablet {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+    }
+
+    &__label {
+        font-size: 11px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__links {
+        cursor: pointer;
+        color: $indigo;
+        text-decoration: none;
+    }
+
+    &__content {
+        font-size: 13px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+}
+//list actions
+.list-actions {
+    display: flex;
+    justify-content: space-between;
+    
+}
+//delete and edit button 
+.action {
+    padding: 0.5rem;
+}
+.inventory-edit{
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+        width: 82px;
+        padding: 1rem;
+    }
+
+    &__button {
+    background-color: white;
+}
+}
+.instock {
+    width: 70px;
+    @include tablet {
+        width:65px;
+    }
+}
+
+.outstock {
+    width: 86px;
+    @include tablet {
+        width: 92px;
+    }
+}
+
+.inventory-edit{
+    width: 64px;
+}

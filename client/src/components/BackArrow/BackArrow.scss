@@ -1,0 +1,20 @@
+@use '../styles/mixin' as *;
+@use '../styles/variable' as *;
+@use '../styles/typography' as *;
+
+//if you want to specifically control the position of this arrow
+// you can write an .arrow in your specific component css to specifically 
+// target it I've added the defaul animation here.
+
+
+
+.arrow{
+    height: 1.25rem;
+    width: 1.25rem;
+    transition: all 0.25s ease-in-out;
+
+    &:hover{
+        transition: all 0.25s ease-in-out;
+        transform: translateX(-4px);
+    }
+}

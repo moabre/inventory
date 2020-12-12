@@ -1,0 +1,12 @@
+@use '../styles/mixin' as *;
+@use '../styles/variable' as *;
+@use '../styles/typography' as *;
+
+[type="radio"]:checked+label {
+    color: $black;
+  }
+
+.input-invalid{
+    background-color: white;
+    border-color: $red;
+}
