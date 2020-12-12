@@ -1,0 +1,20 @@
+{
+  "name": "group-5_instock-main",
+  "version": "1.0.0",
+  "description": "1. Arrow functions 2. Destructuring props",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moabre/instock.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moabre/instock/issues"
+  },
+  "homepage": "https://github.com/moabre/instock#readme"
+}
